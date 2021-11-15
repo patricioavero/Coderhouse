@@ -18,12 +18,12 @@ if (city_to_search in cities):
     city_index = cities.index(city_to_search)
     # To facilitate human reading
     city_position = city_index + 1
+    if (int(city_index) > int(tuple_middle)):
+        print(f'The city {city_to_search} is over the middle of the list [Position: {city_position}]')
+    elif (int(city_index) < int(tuple_middle)):
+        print(f'The city {city_to_search} is under the middle of the list [Position: {city_index}]')
+    else:
+        print(f'The city {city_to_search} is in the middle of the list [Position: {city_index}]')
 else:
     print("The city you inserted is not present in the tuple")
 
-if (int(city_index) > int(tuple_middle)):
-    print(f'The city {city_to_search} is over the middle of the list [Position: {city_position}]')
-elif (int(city_index) < int(tuple_middle)):
-    print(f'The city {city_to_search} is under the middle of the list [Position: {city_index}]')
-else:
-    print(f'The city {city_to_search} is in the middle of the list [Position: {city_index}]')
