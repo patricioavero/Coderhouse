@@ -11,4 +11,4 @@
 ##---------------------------------------------------------------------
 
 ## Add and print al the odd numbers from the range collection
-print(sum(range(1, 100, 2)))
+print("The sum of all the odd numbers from 1 to 100 is:", sum(range(1, 100, 2)))
