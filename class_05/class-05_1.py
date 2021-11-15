@@ -34,7 +34,7 @@ num2 = str(input("Enter the 2nd number: "))
 
 while (option not in valid_options):
     print(calc_menu)
-    option = input("Enter your selection: ")
+    option = input("Enter your choice: ")
     
     if (option == '1'):
         result = int(num1) + int(num2)
