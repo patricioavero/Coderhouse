@@ -16,6 +16,7 @@ nums =  [1, 3, 6, 9]
 ## Ask the user to guess one of the numbers in the list
 # Set the initial condicion for the loop
 num_user = int(0)
+# The loop itself.
 while (num_user not in nums):
     num_user = int(input("Guess on number that is in the list: "))
 else:
