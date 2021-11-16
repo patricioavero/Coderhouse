@@ -20,4 +20,4 @@ for time in range(1, times+1, 1):
     res = res + num
 
 ## Average
-print("The average of the numbers is: ", res / times)
+print(f"The average of the {times} numbers is: ", res / times)

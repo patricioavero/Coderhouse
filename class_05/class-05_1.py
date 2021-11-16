@@ -30,8 +30,7 @@ calc_menu = """
 num1 = str(input("Enter the 1st number: "))
 num2 = str(input("Enter the 2nd number: "))
 
-
-
+## Loop the menu for valid options
 while (option not in valid_options):
     print(calc_menu)
     option = input("Enter your choice: ")
@@ -48,7 +47,7 @@ while (option not in valid_options):
     elif (option == '4'):
         result = int(num1) / int(num2)
         print(f'The result of {num1} / {num2} is: {result}')
-    elif (option.lower == 'q'):
+    elif (option.lower() == 'q'):
         break
 
-    input("Enter to continue...")
+    input("Please, press <Enter> to continue...")
