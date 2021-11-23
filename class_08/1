@@ -1,0 +1,6 @@
+import os
+
+if (len(sys.argv) < 3):
+    print("This script uses two notes as arguments to work")
+elif (sys.argv[1] >= 10) or (sys.argv[2] >= 10):
+	print("arguments are OK")
