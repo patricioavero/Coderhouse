@@ -1,16 +1,21 @@
+import sys
 import os
 
-script_name = os.sys.argv[0]
+script_name = sys.argv[0]
+os_name = os.name
 
-os.system('clear')
+if (os_name.lower() == 'posix'):
+    os.system('clear')
+elif (os_name.lower() == 'nt'):
+    os.system('cls')
 
-if (len(os.sys.argv) < 3):
+if (len(sys.argv) < 3):
     print("This script uses two notes as arguments to work")
     print
     print("python {script_anme} <ARG_1> <ARG_2>")
-elif (0 <= int(os.sys.argv[1]) <= 10) and (0 <= int(os.sys.argv[2]) <= 10):
-	grade_1 = int(os.sys.argv[1])
-	grade_2 = int(os.sys.argv[2])
+elif (0 <= int(sys.argv[1]) <= 10) and (0 <= int(sys.argv[2]) <= 10):
+	grade_1 = int(sys.argv[1])
+	grade_2 = int(sys.argv[2])
 	if (grade_1 >= 7 ) and (grade_2 >= 7):
 	    print("You have promoted the course")
 	elif (grade_1 >= 4) and (grade_2 >= 4):
