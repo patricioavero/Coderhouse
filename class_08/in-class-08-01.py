@@ -24,5 +24,9 @@ elif (0 <= int(sys.argv[1]) <= 10) and (0 <= int(sys.argv[2]) <= 10):
 	    print("You will have to repeat this course")
 	elif (grade_1 < 4) or (grade_2 < 4):
 	    print("You have not reched the minimum to approve the course")
+	    if (grade_1 < 4):
+		    print("You need to repeat the 1st exam only")
+	    else:
+		    print("You need to repear the 2nd exam only")
 else:
-    print("Values for grades should be from 0 to 10 (inclusive)")
+    print("Values for grades must be from 0 to 10 (inclusive)")
