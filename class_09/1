@@ -13,10 +13,9 @@
 
 # Function to evaluate divisor number
 def divisor (dividend, divisor):
-    quotient = dividend % divisor
-    if (quotient == 0):
-        return (True, quotient)
+    if (dividend % divisor == 0):
+        return True
     else:
-        return (False, quotient)
+        return False
 
-print(divisor(973977, 5453))
+print(divisor(7, 3))
