@@ -23,7 +23,8 @@ def clear_screen ():
         os.system('cls')
 
 def menu ():
-    year = int(input("Enter a year to evaluate it as leap-year: "))
+    print("*** Lepar-Year Checker ***")
+    year = int(input("Enter the year you want to check ---> "))
     return year
 
 def quit ():
@@ -45,6 +46,9 @@ def leap_or_not (year):
             leap_condition = 0
             if divisor(year, 400):
                 leap_condition = 1
+    else:
+        leap_condition = 0
+    
     if leap_condition == 1:
         return (1, year)
     if leap_condition == 0:
@@ -58,9 +62,5 @@ def print_leap (leap_bool):
 
 while option.lower() == 'y':
     clear_screen()
-#    year = menu()
-#    leap_bool = leap_or_not(year)
-#    print_leap(leap_bool)
-
     print_leap(leap_or_not(menu()))
     option = quit()
