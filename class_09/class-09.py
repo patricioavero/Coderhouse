@@ -39,8 +39,8 @@ def menu ():
 
 # To check if programs continues
 def quit ():
-    option = str(input("Do you want to check another year? [y/n]) "))
-    return option
+    choice = str(input("Do you want to check another year? [y/n]) "))
+    return choice
 
 # To evaluate divisor number
 def divisor (dividend, divisor):
