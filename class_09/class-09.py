@@ -60,7 +60,7 @@ def leap_or_not (year):
                 leap_condition = 1
     else:
         leap_condition = 0
-    
+
     if leap_condition == 1:
         return (1, year)
     if leap_condition == 0:
