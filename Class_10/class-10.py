@@ -29,14 +29,16 @@ def validate_enter():
     while key != "":
         key = input("Press ENTER to continue...")
 
-def ask_until_number(num, msg):
+def ask_until_number(msg):
+    num = 'a'
     if num.isnumeric() != True:
         valid = 1
         while valid == 1:
             num = input(msg)
+            float(num)
             if num.isnumeric() == True:
                 valid = 0
-    return (0, num)
+    return float(num)
 
 # Rectangle's area calculation
 def rectangle_area(base, height):
@@ -57,14 +59,18 @@ def comparison(num1, num2):
     else:
         return 0
 
+# Average
+def average(num1, num2):
+    average = (num2 + num2) / 2
+    return float(average)
 
 
 ## Rectangle
 clear_screen()
-print("Desafío entregable 3.1")
+print("Desafío entregable 3.1: Rectangle Area")
 print("----------------------")
-base = int(input("Enter the rectangle's base: "))
-altura = int(input("Enter the rectangle's height: "))
+base = ask_until_number("Enter the rectangle's base: ")
+altura = ask_until_number("Enter the rectangle's height: ")
 rectangle_area = rectangle_area(base, altura)
 print(f"The rectangle's area is: {rectangle_area}")
 validate_enter()
@@ -72,28 +78,33 @@ validate_enter()
 
 ## Circle
 clear_screen()
-print("Desafío entregable 3.2")
+print("Desafío entregable 3.2: Circule Area")
 print("----------------------")
-radius = int(input("Enter the radius of the circule: "))
+radius = ask_until_number("Enter the radius of the circule: ")
 circule_area = circule_area(radius)
 print(f"The area of the circule is: {circule_area}")
 validate_enter()
 
 ## Relation
 clear_screen()
-print("Desafío entregable 3.3")
+print("Desafío entregable 3.3: Relation")
 print("----------------------")
-num1 = int(input("Enter the 1st number: "))
-num2 = int(input("Enter the 2ns number: "))
+num1 = ask_until_number("Enter the 1st number: ")
+num2 = ask_until_number("Enter the 2ns number: ")
 comp_result = comparison(num1, num2)
-
 if comp_result == 1:
     print(f"The Num 1: \'{num1}\' is greater than Num 2: \'{num2}\'")
 elif comp_result == -1:
     print(f"The Num 1: \'{num1}\' is less than Num 2: \'{num2}\'")
 else:
     print(f"The Num 1: \'{num1}\' and Num 2: \'{num2}\' are equal")
-
 validate_enter()
 
-validate_int(num = "a", message = "Please enter a number: ")
+## Average
+clear_screen()
+print("Desafío entregable 3.4: Average")
+print("----------------------")
+num1 = ask_until_number("Enter the 1st number: ")
+num2 = ask_until_number("Enter the 2ns number: ")
+print(f"The average of {num1} and {num2} is:", average(num1, num2))
+validate_enter()

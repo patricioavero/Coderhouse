@@ -25,7 +25,7 @@ option = str('y')
 ##----------------------------------------
 # To clear the screen
 def clear_screen ():
-    os_name = os.name
+    os_name = os.name 
     if (os_name.lower() == 'posix'):
         os.system('clear')
     elif (os_name.lower() == 'nt'):
