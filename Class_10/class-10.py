@@ -29,10 +29,14 @@ def validate_enter():
     while key != "":
         key = input("Press ENTER to continue...")
 
-# Validate integer
-def validate_int(num, message):
-    if num.isnumeric() == False:
-        num = input(message)
+def ask_until_number(num, msg):
+    if num.isnumeric() != True:
+        valid = 1
+        while valid == 1:
+            num = input(msg)
+            if num.isnumeric() == True:
+                valid = 0
+    return (0, num)
 
 # Rectangle's area calculation
 def rectangle_area(base, height):
