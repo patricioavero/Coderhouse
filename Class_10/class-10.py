@@ -24,16 +24,16 @@ def clear_screen():
         os.system('cls')
 
 # Validate ENTER key
-def ask_for_number():
-    
+def validate_enter():
+    key = 1
+    while key != "":
+        key = input("Press ENTER to continue...")
 
 # Validate integer
 def validate_int(num, message):
     if num.isnumeric() == False:
         num = input(message)
 
-
-    
 # Rectangle's area calculation
 def rectangle_area(base, height):
     r_area = base * height
