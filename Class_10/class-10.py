@@ -35,7 +35,6 @@ def ask_until_number(msg):
         valid = 1
         while valid == 1:
             num = input(msg)
-            float(num)
             if num.isnumeric() == True:
                 valid = 0
     return float(num)
@@ -61,10 +60,32 @@ def comparison(num1, num2):
 
 # Average
 def average(num1, num2):
-    average = (num2 + num2) / 2
+    average = (float(num1) + float(num2)) / 2
     return float(average)
 
+# Cut
+def cut_number(lower_limit, num, upper_limit):
+    if lower_limit < num < upper_limit:
+        return num
+    elif num < lower_limit:
+        return lower_limit
+    else:
+        return upper_limit
 
+# Separate odd and even numbers
+def separate(list_1):
+    list_even = []
+    list_odd = []
+    for num in list_1:
+        if num % 2 == 0:
+            list_even.append(num)
+        else:
+            list_odd.append(num)
+    return[list_even, list_odd]
+
+####################################################################
+## Main
+####################################################################
 ## Rectangle
 clear_screen()
 print("Desafío entregable 3.1: Rectangle Area")
@@ -90,7 +111,7 @@ clear_screen()
 print("Desafío entregable 3.3: Relation")
 print("----------------------")
 num1 = ask_until_number("Enter the 1st number: ")
-num2 = ask_until_number("Enter the 2ns number: ")
+num2 = ask_until_number("Enter the 2nd number: ")
 comp_result = comparison(num1, num2)
 if comp_result == 1:
     print(f"The Num 1: \'{num1}\' is greater than Num 2: \'{num2}\'")
@@ -105,6 +126,26 @@ clear_screen()
 print("Desafío entregable 3.4: Average")
 print("----------------------")
 num1 = ask_until_number("Enter the 1st number: ")
-num2 = ask_until_number("Enter the 2ns number: ")
-print(f"The average of {num1} and {num2} is:", average(num1, num2))
+num2 = ask_until_number("Enter the 2nd number: ")
+print(f"The average of {num1} and {num2} is:", average(float(num1), float(num2)))
+validate_enter()
+
+## Cut
+clear_screen()
+print("Desafío entregable 3.5: Cut")
+print("----------------------")
+upper_limit = 10
+lower_limit = 0
+num = ask_until_number("Enter the number to cut: ")
+print(cut_number(lower_limit, num, upper_limit))
+validate_enter()
+
+## Separation
+clear_screen()
+print("Desafío entregable 3.6: Separate odd and even ")
+print("----------------------")
+list_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+result = separate(list_1)
+print(f"The even list is: {result[0]}")
+print(f"The odd list is: {result[1]}")
 validate_enter()
